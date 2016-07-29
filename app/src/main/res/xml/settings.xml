@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Options">
+        <Preference
+            android:title="Pokemon Search Radius"
+            android:summary="Distance that the app will search for catchable Pokémon"
+            android:key="distance_dialog"/>
+        <Preference
+            android:title="Clear Pokémon"
+            android:summary="Clear Pokémon that are currently on the map"
+            android:key="clear_pokemon"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

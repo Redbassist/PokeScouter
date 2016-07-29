@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context="redbassist.pogomap.com.MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/splashscreen"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:src="@drawable/splashscreen"
+        android:clickable="false"
+        android:contentDescription="ImagenTick"
+        android:layout_alignTop="@+id/map"
+        android:layout_alignLeft="@+id/map"
+        android:layout_alignStart="@+id/map"/>
+
+    <ImageButton
+        android:visibility="gone"
+        android:background="#00000000"
+        android:cropToPadding="false"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/btn_settings"
+        android:src="@drawable/cog"
+        android:scaleType="fitXY"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"  />
+
+    <Button
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:scaleX="1.2"
+    android:scaleY="1.2"
+    android:text="SCAN"
+    android:id="@+id/scanButton"
+    android:theme="@style/buttonStyle"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="-14dp"
+        android:scaleX="0.3"
+        android:scaleY="0.3"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/titleball"
+        android:src="@drawable/titleball"
+        android:clickable="false"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="-30dp"
+        android:scaleX="0.3"
+        android:scaleY="0.3"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/titlemark"
+        android:src="@drawable/titlemark"
+        android:clickable="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/login_select"
+        android:gravity="center_horizontal" android:layout_centerVertical="true" >
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btn_google_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PTC LOGIN"
+            android:layout_marginTop="35dp"
+            android:id="@+id/btn_ptc_login"
+            android:background="@color/colorAccent"
+            android:theme="@style/buttonStyle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="WARNING: \nPlease do not use your main PokeGo \naccount for this app!"
+            android:id="@+id/textView2"
+            android:textAlignment="center"
+            android:layout_marginTop="100dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/cnt_login"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Login with a Pokemon Trainer Club account"
+            android:id="@+id/textView3"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/et_username"
+            android:hint="Username" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/et_password"
+            android:hint="Password" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:id="@+id/btn_login"
+                android:background="@color/colorAccent"
+                android:theme="@style/buttonStyle"/>
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CREATE ACCOUNT"
+            android:id="@+id/btn_register"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorAccent"
+            android:theme="@style/buttonStyle"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/highlight"
+        android:layout_width="match_parent"
+        android:layout_height="50mm">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="14.2mm"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/highlightbox"
+            android:src="@drawable/highlight"/>
+
+        <ImageView
+            android:layout_width="50mm"
+            android:layout_centerHorizontal="true"
+            android:layout_height="7.8mm"
+            android:layout_marginTop="1.9mm"
+            android:paddingLeft="-22.9mm"
+            android:id="@+id/highlighticon"
+            android:src="@drawable/p2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cast_intro_overlay_background_color"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_marginTop="3mm"
+            android:paddingLeft="2mm"
+            android:id="@+id/highlightname"
+            android:layout_centerHorizontal="true"
+            android:text="POKENAME"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cast_intro_overlay_background_color"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_marginTop="7.6mm"
+            android:id="@+id/highlighttime"
+            android:paddingLeft="4mm"
+            android:layout_centerHorizontal="true"
+            android:text="10:15"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

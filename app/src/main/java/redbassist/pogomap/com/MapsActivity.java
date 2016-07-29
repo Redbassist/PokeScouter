@@ -372,6 +372,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     android.Manifest.permission.ACCESS_FINE_LOCATION}, 1400);
         }
         mMap.getUiSettings().setMapToolbarEnabled(false);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.setPadding(0,0,0,120);
+
         mMap.getUiSettings().setCompassEnabled(false);
         mMap.setOnMyLocationChangeListener(myLocationChangeListener);
 
